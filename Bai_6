@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Nhập n: ");
+        int n = sc.nextInt();
+
+        StringBuilder binary = new StringBuilder();
+        int temp = n;
+
+        while (temp > 0) {
+            binary.append(temp % 2);
+            temp /= 2;
+        }
+
+        System.out.println(binary.reverse().toString());
+    }
+}
