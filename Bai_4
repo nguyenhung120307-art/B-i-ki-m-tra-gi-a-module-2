@@ -22,7 +22,7 @@ public class Main {
         a /= ucln;
         b /= ucln;
 
-        if (b < 0) { // Đưa dấu âm lên tử số nếu mẫu âm
+        if (b < 0) { 
             a = -a;
             b = -b;
         }
