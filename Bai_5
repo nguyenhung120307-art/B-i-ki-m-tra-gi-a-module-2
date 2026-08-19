@@ -11,7 +11,7 @@ public class Main {
         while (left <= right) {
             int mid = left + (right - left) / 2;
             if (arr[mid] == x) {
-                position = mid + 1; // Vị trí tính từ 1
+                position = mid + 1; 
                 break;
             } else if (arr[mid] < x) {
                 left = mid + 1;
