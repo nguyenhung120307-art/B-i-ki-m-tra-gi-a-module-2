@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = {1, 4, 7, 9, 12};
+        int x = 9;
+
+        int left = 0, right = arr.length - 1;
+        int position = -1;
+
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+            if (arr[mid] == x) {
+                position = mid + 1; // Vị trí tính từ 1
+                break;
+            } else if (arr[mid] < x) {
+                left = mid + 1;
+            } else {
+                right = mid - 1;
+            }
+        }
+
+        if (position != -1) {
+            System.out.println("Vị trí " + position);
+        } else {
+            System.out.println("Không tìm thấy");
+        }
+    }
+}
