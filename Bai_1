@@ -1,0 +1,25 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = {3, 1, 3, 2, 1, 3};
+        Map<Integer, Integer> map = new HashMap<>();
+
+        for (int num : arr) {
+            map.put(num, map.getOrDefault(num, 0) + 1);
+        }
+
+        int maxCount = 0;
+        for (int count : map.values()) {
+            if (count > maxCount) {
+                maxCount = count;
+            }
+        }
+
+        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+            if (entry.getValue() == maxCount) {
+                System.out.println("Món " + entry.getKey() + " bán chạy nhất (" + maxCount + " lần)");
+            }
+        }
+    }
+}
